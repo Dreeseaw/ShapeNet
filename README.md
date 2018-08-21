@@ -4,7 +4,7 @@ A VGG-style convolutional nueral network written in pure python. First step in a
 
 ## Training
 
-To begin training the model and watching the loss fall, simply download the source and run the babyAImodel.py file. This will print out the loss and performance benchmarks periodicly. 
+To begin training the model and watching the loss fall, simply download the source and run the babyAImodel.py file (through terminal). This will print out the loss and performance benchmarks periodicly. 
 
 ## About the model
 
