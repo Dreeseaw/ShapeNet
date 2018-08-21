@@ -5,6 +5,12 @@ William Dreese
 - 
 
 '''
+from __future__ import print_function
+import sys
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+    
 import layers
 import datetime
 import numpy as np
@@ -114,13 +120,13 @@ class BasicShapesModel:
                                           batch_images[1],
                                           bat_si)
                 #model-specific benchmarking
-                print ("Loss after batch",str(ex),":",str(loss))
+                eprint("Loss after batch",str(ex),":",str(loss))
                 loss = 0.0
                 if ex % 10 == 0 and ex != 0:
                     curtime_new = datetime.datetime.now()
                     secs = (curtime_new.second-curtime.second)+(curtime_new.minute-curtime.minute)*60
                     curtime = curtime_new
-                    print("10 batchs (200 passes) total time (secs): ", str(secs))                    
+                    eprint("10 batchs (200 passes) total time (secs): ", str(secs))                    
             print("Epoch ",str(i)," avg loss: ",str(float(loss/float(len(self._data)))))
 
 if __name__ == "__main__":
