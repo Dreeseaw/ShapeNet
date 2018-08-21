@@ -63,7 +63,7 @@ class BasicShapesModel:
     def getData(self):
         daters = list()
         ret = list()
-        datafile = open("shapeset/shapeset1_1cs_2p_3o.5000.valid.amat")
+        datafile = open("shapeset1_1cs_2p_3o.5000.valid.amat")
         a = datafile.readline()
         for i in range(0,5000):
             daters.append(datafile.readline().split(" "))
